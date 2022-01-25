@@ -4,11 +4,12 @@ import com.bridgelabz.addressbook.dto.AddressBookDTO;
 
 public class AddressBook {
 
+	/** Private variables. **/
 	private long id;
 	private String name;
 	private String address;
 
-	/** Default Constructor. **/
+	/*** Default constructor. ***/
 	public AddressBook() {
 	}
 

@@ -1,5 +1,7 @@
 package com.bridgelabz.addressbook.services;
 
+import java.util.List;
+
 import com.bridgelabz.addressbook.dto.AddressBookDTO;
 import com.bridgelabz.addressbook.models.AddressBook;
 
@@ -9,6 +11,8 @@ public interface IAddressBookService {
 
 	/*** Declaring methods. ***/
 	public String sayHello();
+
+	public List<AddressBook> getAllAddressBooksInList();
 
 	public AddressBook getAddressBookDataById(long id);
 

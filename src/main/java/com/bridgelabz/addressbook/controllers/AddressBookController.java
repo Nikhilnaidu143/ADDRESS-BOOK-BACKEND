@@ -1,5 +1,7 @@
 package com.bridgelabz.addressbook.controllers;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,9 +23,10 @@ import com.bridgelabz.addressbook.services.AddressBookService;
 @RequestMapping("/address")
 public class AddressBookController {
 
-	@Autowired //AutoWired annotation is used for automatic dependency injection.
+	/*** UC-2.2 :- Introducing Services Layer in AddressBook App. ***/
+	@Autowired // AutoWired annotation is used for automatic dependency injection.
 	private AddressBookService addressBookService;
-	
+
 	/***
 	 * UC-1 :- Create a Address Book Spring Project to cater to REST Request from
 	 * Address Book UI.
@@ -37,9 +40,17 @@ public class AddressBookController {
 	/***
 	 * UC-2 :- Create a Rest Controller to demonstrate the various HTTP Methods.
 	 ***/
-	
+
 	/*** UC-2.2 :- Introducing Services Layer in AddressBook App. ***/
-	
+
+	/*** get all addressBooks. ***/
+	@GetMapping(value = "/getAll")
+	public ResponseEntity<ResponseDTO> getAllAddressBooks() {
+		List<AddressBook> addressBook = addressBookService.getAllAddressBooksInList();
+		ResponseDTO responseDTO = new ResponseDTO("Get All Request Successfull...!", addressBook);
+		return new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
+	}
+
 	/*** get addressBook by using ID . ***/
 	@GetMapping(value = "/get/{id}")
 	public ResponseEntity<ResponseDTO> getAddressBook(@PathVariable String id) {
