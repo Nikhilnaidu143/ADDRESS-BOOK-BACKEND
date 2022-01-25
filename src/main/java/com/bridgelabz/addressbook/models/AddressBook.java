@@ -2,14 +2,15 @@ package com.bridgelabz.addressbook.models;
 
 import com.bridgelabz.addressbook.dto.AddressBookDTO;
 
-public class AddressBook {	
-	
+public class AddressBook {
+
 	private long id;
 	private String name;
 	private String address;
-	
+
 	/** Default Constructor. **/
-	public AddressBook() {	}
+	public AddressBook() {
+	}
 
 	/** Parameterized Constructor. **/
 	public AddressBook(long id, AddressBookDTO addressBookDTO) {
