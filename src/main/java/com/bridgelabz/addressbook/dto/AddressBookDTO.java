@@ -1,9 +1,19 @@
 package com.bridgelabz.addressbook.dto;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
+
 /*** UC-2.1 :- Introducing DTO and Model to AddressBook App. ***/
 public class AddressBookDTO {
+	/***
+	 * UC-4.1:- Add Validation to Name Field so the REST call can be validated.
+	 ***/
+
 	/** variables. **/
+	@NotEmpty
+	@Pattern(regexp = "^[A-Z]{1}[a-zA-Z\\s]{2,}$", message = "Name validation failed..!")
 	public String name;
+	@NotEmpty
 	public String address;
 
 	/** Parameterized constructor. **/
