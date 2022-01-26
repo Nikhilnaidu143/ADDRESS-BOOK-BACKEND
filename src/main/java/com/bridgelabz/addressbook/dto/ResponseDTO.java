@@ -1,6 +1,12 @@
 package com.bridgelabz.addressbook.dto;
 
-public class ResponseDTO {
+import lombok.Data;
+
+/***
+ * UC-3.1 :- Use Lombok Library to auto generate getters and setters for the
+ * DTO.
+ ***/
+public @Data class ResponseDTO {
 	/** Private variables. **/
 	private String message;
 	private Object data;
@@ -8,23 +14,6 @@ public class ResponseDTO {
 	/** Parameterized constructor. **/
 	public ResponseDTO(String message, Object data) {
 		this.message = message;
-		this.data = data;
-	}
-
-	/** getters and setters. **/
-	public String getMessage() {
-		return message;
-	}
-
-	public void setMessage(String message) {
-		this.message = message;
-	}
-
-	public Object getData() {
-		return data;
-	}
-
-	public void setData(Object data) {
 		this.data = data;
 	}
 }
