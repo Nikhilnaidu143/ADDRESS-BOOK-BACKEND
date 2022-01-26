@@ -3,6 +3,7 @@ package com.bridgelabz.addressbook.services;
 import java.util.List;
 
 import com.bridgelabz.addressbook.dto.AddressBookDTO;
+import com.bridgelabz.addressbook.exceptions.AddressBookException;
 import com.bridgelabz.addressbook.models.AddressBook;
 
 public interface IAddressBookService {
@@ -14,7 +15,7 @@ public interface IAddressBookService {
 
 	public List<AddressBook> getAllAddressBooksInList();
 
-	public AddressBook getAddressBookDataById(long id);
+	public AddressBook getAddressBookDataById(long id) throws AddressBookException;
 
 	public AddressBook createAddressBook(AddressBookDTO addressBookDTO);
 

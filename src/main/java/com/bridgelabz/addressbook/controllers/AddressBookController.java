@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.bridgelabz.addressbook.dto.AddressBookDTO;
 import com.bridgelabz.addressbook.dto.ResponseDTO;
+import com.bridgelabz.addressbook.exceptions.AddressBookException;
 import com.bridgelabz.addressbook.models.AddressBook;
 import com.bridgelabz.addressbook.services.AddressBookService;
 
@@ -53,9 +54,11 @@ public class AddressBookController {
 		return new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);
 	}
 
-	/*** get addressBook by using ID . ***/
+	/*** get addressBook by using ID . 
+	 * @throws AddressBookException 
+	 * @throws NumberFormatException ***/
 	@GetMapping(value = "/get/{id}")
-	public ResponseEntity<ResponseDTO> getAddressBook(@PathVariable String id) {
+	public ResponseEntity<ResponseDTO> getAddressBook(@PathVariable String id) throws NumberFormatException, AddressBookException {
 		AddressBook addressBook = addressBookService.getAddressBookDataById(Long.parseLong(id));
 		ResponseDTO responseDTO = new ResponseDTO("Get Request Successfull...!", addressBook);
 		return new ResponseEntity<ResponseDTO>(responseDTO, HttpStatus.OK);

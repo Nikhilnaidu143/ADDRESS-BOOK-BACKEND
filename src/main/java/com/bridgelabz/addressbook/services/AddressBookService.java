@@ -7,6 +7,7 @@ import java.util.concurrent.atomic.AtomicLong;
 import org.springframework.stereotype.Service;
 
 import com.bridgelabz.addressbook.dto.AddressBookDTO;
+import com.bridgelabz.addressbook.exceptions.AddressBookException;
 import com.bridgelabz.addressbook.models.AddressBook;
 
 @Service
@@ -21,16 +22,7 @@ public class AddressBookService implements IAddressBookService {
 
 	/** Returning address book for crud operations. **/
 	private static AddressBook returnAddressBookById(long id) {
-		for (AddressBook addressBook : addressBookList) {
-			long addressBookID = addressBook.getId();
-			if (addressBookID == id) {
-				System.out.println(addressBook);
-				return addressBook;
-			} else {
-				continue;
-			}
-		}
-		return null;
+		return addressBookList.stream().filter(addData -> addData.getId() == id).findFirst().orElse(null);
 	}
 
 	/*** Defining implemented methods from IAddressBookService interface. ***/
@@ -46,11 +38,12 @@ public class AddressBookService implements IAddressBookService {
 		return allAddressBooks;
 	}
 
-	/*** Getting addressBook by ID. ***/
+	/*** Getting addressBook by ID. 
+	 * @throws AddressBookException ***/
 	@Override
-	public AddressBook getAddressBookDataById(long id) {
-		AddressBook addressBook = returnAddressBookById(id); // returning addressBook.
-		return addressBook;
+	public AddressBook getAddressBookDataById(long id) throws AddressBookException {
+		return addressBookList.stream().filter(addData -> addData.getId() == id).findFirst()
+				.orElseThrow(() -> new AddressBookException("ID not found...!"));
 	}
 
 	/*** Creating address book. ***/
