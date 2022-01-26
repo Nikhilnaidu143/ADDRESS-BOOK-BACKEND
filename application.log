@@ -3,3 +3,37 @@
 2022-01-26 08:19:47.426  INFO 22844 --- [restartedMain] c.b.addressbook.AddressBookApplication   : No active profile set, falling back to default profiles: default
 2022-01-26 08:19:54.896  INFO 22844 --- [restartedMain] c.b.addressbook.AddressBookApplication   : Started AddressBookApplication in 9.729 seconds (JVM running for 12.217)
 2022-01-26 08:19:54.908  INFO 22844 --- [restartedMain] c.b.addressbook.AddressBookApplication   : Address Book App started in COMMON Environmet.
+2022-01-26 09:13:48.979  INFO 31232 --- [restartedMain] c.b.addressbook.AddressBookApplication   : Starting AddressBookApplication using Java 15.0.2 on DESKTOP-F8A42Q9 with PID 31232 (C:\Users\VICKY\Desktop\CFPproblems\AddressBook\target\classes started by VICKY in C:\Users\VICKY\Desktop\CFPproblems\AddressBook)
+2022-01-26 09:13:48.982 DEBUG 31232 --- [restartedMain] c.b.addressbook.AddressBookApplication   : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-01-26 09:13:48.983  INFO 31232 --- [restartedMain] c.b.addressbook.AddressBookApplication   : The following profiles are active: prod
+2022-01-26 09:13:51.497  INFO 31232 --- [restartedMain] c.b.addressbook.AddressBookApplication   : Started AddressBookApplication in 3.773 seconds (JVM running for 57.855)
+2022-01-26 09:13:51.798  INFO 31232 --- [restartedMain] c.b.addressbook.AddressBookApplication   : Address Book App started in PROD Environmet.
+2022-01-26 09:14:02.163  INFO 19760 --- [restartedMain] c.b.addressbook.AddressBookApplication   : Starting AddressBookApplication using Java 15.0.2 on DESKTOP-F8A42Q9 with PID 19760 (C:\Users\VICKY\Desktop\CFPproblems\AddressBook\target\classes started by VICKY in C:\Users\VICKY\Desktop\CFPproblems\AddressBook)
+2022-01-26 09:14:02.172 DEBUG 19760 --- [restartedMain] c.b.addressbook.AddressBookApplication   : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-01-26 09:14:02.172  INFO 19760 --- [restartedMain] c.b.addressbook.AddressBookApplication   : The following profiles are active: prod
+2022-01-26 09:14:09.468  WARN 19760 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-01-26 09:14:09.515  WARN 19760 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2022-01-26 09:14:09.607 ERROR 19760 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2022-01-26 09:14:50.461  INFO 24740 --- [restartedMain] c.b.addressbook.AddressBookApplication   : Starting AddressBookApplication using Java 15.0.2 on DESKTOP-F8A42Q9 with PID 24740 (C:\Users\VICKY\Desktop\CFPproblems\AddressBook\target\classes started by VICKY in C:\Users\VICKY\Desktop\CFPproblems\AddressBook)
+2022-01-26 09:14:50.468 DEBUG 24740 --- [restartedMain] c.b.addressbook.AddressBookApplication   : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-01-26 09:14:50.468  INFO 24740 --- [restartedMain] c.b.addressbook.AddressBookApplication   : The following profiles are active: prod
+2022-01-26 09:14:58.828  INFO 24740 --- [restartedMain] c.b.addressbook.AddressBookApplication   : Started AddressBookApplication in 11.368 seconds (JVM running for 13.53)
+2022-01-26 09:14:58.835  INFO 24740 --- [restartedMain] c.b.addressbook.AddressBookApplication   : Address Book App started in PROD Environmet.
+2022-01-26 09:15:42.408  INFO 24740 --- [restartedMain] c.b.addressbook.AddressBookApplication   : Starting AddressBookApplication using Java 15.0.2 on DESKTOP-F8A42Q9 with PID 24740 (C:\Users\VICKY\Desktop\CFPproblems\AddressBook\target\classes started by VICKY in C:\Users\VICKY\Desktop\CFPproblems\AddressBook)
+2022-01-26 09:15:42.409 DEBUG 24740 --- [restartedMain] c.b.addressbook.AddressBookApplication   : Running with Spring Boot v2.6.3, Spring v5.3.15
+2022-01-26 09:15:42.410  INFO 24740 --- [restartedMain] c.b.addressbook.AddressBookApplication   : The following profiles are active: prod
+2022-01-26 09:15:44.922  INFO 24740 --- [restartedMain] c.b.addressbook.AddressBookApplication   : Started AddressBookApplication in 3.272 seconds (JVM running for 59.624)
+2022-01-26 09:15:44.938  INFO 24740 --- [restartedMain] c.b.addressbook.AddressBookApplication   : Address Book App started in PROD Environmet.
