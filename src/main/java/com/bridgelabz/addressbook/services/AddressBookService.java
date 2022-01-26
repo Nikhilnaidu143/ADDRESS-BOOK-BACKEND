@@ -42,8 +42,13 @@ public class AddressBookService implements IAddressBookService {
 	 * @throws AddressBookException ***/
 	@Override
 	public AddressBook getAddressBookDataById(long id) throws AddressBookException {
-		return addressBookList.stream().filter(addData -> addData.getId() == id).findFirst()
-				.orElseThrow(() -> new AddressBookException("ID not found...!"));
+		AddressBook addressBook = returnAddressBookById(id);
+		if(addressBook == null) {
+			throw new AddressBookException("ID not found...!");
+		}
+		else {
+			return addressBook;
+		}
 	}
 
 	/*** Creating address book. ***/
