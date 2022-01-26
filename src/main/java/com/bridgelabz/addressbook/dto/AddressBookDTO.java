@@ -10,10 +10,10 @@ public class AddressBookDTO {
 	 ***/
 
 	/** variables. **/
-	@NotEmpty
+	@NotEmpty(message = "Name cannot be null..!")
 	@Pattern(regexp = "^[A-Z]{1}[a-zA-Z\\s]{2,}$", message = "Name validation failed..!")
 	public String name;
-	@NotEmpty
+	@NotEmpty(message = "Address cannot be null...!")
 	public String address;
 
 	/** Parameterized constructor. **/
